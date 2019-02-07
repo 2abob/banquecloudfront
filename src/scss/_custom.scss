@@ -1,0 +1,12 @@
+// Here you can add other styles
+div.app-body { 
+    margin:0;
+    padding:0;
+    background: url(assets/img/brand/back.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+  }
+  app-sidebar {
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+  }

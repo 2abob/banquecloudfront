@@ -1,0 +1,68 @@
+<div class="animated fadeIn">
+    
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-header">
+                Bootstrap Carousel
+              </div>
+              <div class="card-body">
+                <carousel [interval]="3000">
+                  <slide>
+                    <img src="https://loremflickr.com/900/500/mountains?lock=1" alt="First slide" style="display: block; width: 100%;">
+                  </slide>
+                  <slide>
+                    <img src="https://loremflickr.com/900/500/mountains?lock=2" alt="Second slide" style="display: block; width: 100%;">
+                  </slide>
+                  <slide>
+                    <img src="https://loremflickr.com/900/500/mountains?lock=3" alt="Third slide" style="display: block; width: 100%;">
+                  </slide>
+                </carousel>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-header">
+              <strong>ENCAISSEMENT</strong>
+            </div>
+            <div class="card-body">
+              <form action="" method="post" class="form-horizontal">
+                  
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Ar</span>
+                      </div>
+                      <input type="text" id="input3-group1" name="input3-group1" class="form-control" placeholder="Montant">
+                      <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="date-input">Date d'action</label>
+                    <div class="col-md-9">
+                      <input class="form-control"  type="date" name="date-input" placeholder="date">
+                      <!--<input  class="form-control" id="date-input" type="date" name="date-input" placeholder="date">-->
+                      <span class="help-block"></span>
+                    </div>
+                  </div>  
+              </form>
+            </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Soumettre</button>
+              <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Annuler</button>
+            </div>
+          </div>
+        </div>
+       
+       
+      </div>
+  
+</div>

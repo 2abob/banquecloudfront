@@ -1,0 +1,55 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header">
+              <i class="fa fa-money"></i>EFFECTUER UN DECAISSEMENT              
+            </div>
+            <div (collapsed)="collapsed($event)"
+                 (expanded)="expanded($event)"
+                 [collapse]="isCollapsed"
+                 class="card-body">
+              <form class="form-horizontal">
+              <div class="form-group">
+                <label class="col-form-label" for="prependedInput">Numero de compte du destinataire</label>
+                <div class="controls">
+                  <div class="input-prepend input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">n°</span>
+                    </div>
+                    <input id="prependedInput" class="form-control" size="16" type="text">
+                  </div>                  
+                </div>
+              </div>             
+              <div class="form-group">
+                <label class="col-form-label" for="appendedPrependedInput">Montant</label>
+                <div class="controls">
+                  <div class="input-prepend input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Ar</span>
+                    </div>
+                    <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+              <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="date-input">Date de decaissement</label>
+                  <div class="col-md-9">
+                    <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+                    <span class="help-block"></span>
+                  </div>
+                </div>  
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Valider</button>
+                <button class="btn btn-secondary" type="button">Annuler</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div> <!--/.col-->
+      </div><!--/.row-->
+ 
+</div>
