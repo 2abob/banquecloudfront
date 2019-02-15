@@ -17,7 +17,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text">n°</span>
                     </div>
-                    <input id="prependedInput" class="form-control" size="16" type="text">
+                    <input name="numero" id="prependedInput" class="form-control" size="16" type="text" [(ngModel)]="numero" >
                   </div>                  
                 </div>
               </div>             
@@ -26,9 +26,9 @@
                 <div class="controls">
                   <div class="input-prepend input-group">
                     <div class="input-group-prepend">
-                      <span class="input-group-text">Ar</span>
+                      <span class="input-group-text">{{ devis }}</span>
                     </div>
-                    <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                    <input name="montant" id="appendedPrependedInput" class="form-control" size="16" type="text" [(ngModel)]="montant">
                     <div class="input-group-append">
                       <span class="input-group-text">.00</span>
                     </div>
@@ -38,13 +38,13 @@
               <div class="form-group row">
                   <label class="col-md-3 col-form-label" for="date-input">Date de decaissement</label>
                   <div class="col-md-9">
-                    <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+                    <input name="date" class="form-control" id="date-input" type="date" name="date-input" placeholder="date" [(ngModel)]="date" >
                     <span class="help-block"></span>
                   </div>
                 </div>  
               <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Valider</button>
-                <button class="btn btn-secondary" type="button">Annuler</button>
+                <button type="submit"  (click)="deposer()" class="btn btn-primary">Valider</button>
+                <button class="btn btn-secondary" (click)="annuler()" type="button">Annuler</button>
               </div>
             </form>
             </div>

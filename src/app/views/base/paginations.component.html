@@ -9,14 +9,14 @@
                 <form action="" method="post">
                   <div class="form-group">
                     <label for="mois">Mois</label>
-                    <input type="month" id="nf-mois" name="nf-mois" class="form-control" placeholder="Entrer le mois.">
+                    <input type="month" id="nf-mois" name="clotureMois" class="form-control" placeholder="Entrez le mois !" [(ngModel)]="clotureMois">
                     <span class="help-block"></span>
                   </div>
                 </form>
               </div>
               <div class="card-footer">
-                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                <button type="submit" class="btn btn-sm btn-primary"  (click)="cloturerMois()" ><i class="fa fa-dot-circle-o"></i> Submit</button>
+                <button type="reset" class="btn btn-sm btn-danger" (click)="resetClotureMois()"><i class="fa fa-ban"></i> Reset</button>
               </div>
             </div>              
           </div>
@@ -29,14 +29,14 @@
                   <form action="" method="post">
                     <div class="form-group">
                       <label for="annees">Années</label>
-                      <input type="years" id="nf-annees" name="nf-password" class="form-control" placeholder="Entrer l'années." autocomplete="current-password">
+                      <input type="years" id="nf-annees" name="clotureAnnuel" class="form-control" placeholder="Entrez l'année !" autocomplete="current-password" [(ngModel)]="clotureAnnuel" >
                       <span class="help-block"></span>
                     </div>
                   </form>
                 </div>
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                  <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                  <button type="submit" class="btn btn-sm btn-primary"  (click)="cloturerAnne()" ><i class="fa fa-dot-circle-o"></i> Submit</button>
+                  <button type="reset" class="btn btn-sm btn-danger" (click)="resetClotureAnnuel()" ><i class="fa fa-ban"></i> Reset</button>
                 </div>
               </div>              
             </div>
@@ -49,14 +49,14 @@
                     <form action="" method="post">
                       <div class="form-group">
                         <label for="mois">Mois</label>
-                        <input type="month" id="nf-mois" name="nf-mois" class="form-control" placeholder="Entrer le mois.">
+                        <input type="month" id="nf-mois" name="reporter" class="form-control" placeholder="Entrez le mois !" [(ngModel)]="reporter" >
                         <span class="help-block"></span>
                       </div>
                     </form>
                   </div>
                   <div class="card-footer">
-                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                    <button type="submit" class="btn btn-sm btn-primary" (click)="reporterMois()" ><i class="fa fa-dot-circle-o"></i> Submit</button>
+                    <button type="reset" class="btn btn-sm btn-danger" (click)="resetreport()" ><i class="fa fa-ban"></i> Reset</button>
                   </div>
                 </div>              
               </div>

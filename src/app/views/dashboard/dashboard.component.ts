@@ -1,14 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+import { CookieService } from 'ngx-cookie-service';
+import {Router} from "@angular/router";
 
 @Component({
-  templateUrl: 'dashboard.component.html'
+  templateUrl: 'dashboard.component.html',
+  providers: [CookieService]
 })
 export class DashboardComponent implements OnInit {
 
   radioModel: string = 'Month';
+
+  constructor(private cookieService : CookieService, private router : Router){
+    // console.log(cookieService.get('numero'));
+    if(cookieService.get('numero') == null){
+      router.navigate(["login"]);
+    }
+    // console.log('nom : '+cookieService.get("nom")+'- prenom : '+cookieService.get("prenom")+' - numero : '+cookieService.get("numero")+'- devis : '+cookieService.get("devis"));
+    // cookieService.set("test", "test")
+  }
 
   // lineChart1
   public lineChart1Data: Array<any> = [

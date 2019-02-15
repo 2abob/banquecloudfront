@@ -35,9 +35,9 @@
                   <div class="col-md-12">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <span class="input-group-text">Ar</span>
+                        <span class="input-group-text">{{devis}}</span>
                       </div>
-                      <input type="text" id="input3-group1" name="input3-group1" class="form-control" placeholder="Montant">
+                      <input type="text" id="input3-group1" name="input3-group1" class="form-control" placeholder="Montant" [(ngModel)]="montant">
                       <div class="input-group-append">
                         <span class="input-group-text">.00</span>
                       </div>
@@ -48,7 +48,7 @@
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label" for="date-input">Date d'action</label>
                     <div class="col-md-9">
-                      <input class="form-control"  type="date" name="date-input" placeholder="date">
+                      <input class="form-control"  type="date" name="date-input" placeholder="date" [(ngModel)]="date">
                       <!--<input  class="form-control" id="date-input" type="date" name="date-input" placeholder="date">-->
                       <span class="help-block"></span>
                     </div>
@@ -56,8 +56,8 @@
               </form>
             </div>
             <div class="card-footer">
-              <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Soumettre</button>
-              <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Annuler</button>
+              <button (click)="deposerargent()" type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Soumettre</button>
+              <button (click)="annuler()" type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Annuler</button>
             </div>
           </div>
         </div>
